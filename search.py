@@ -10,7 +10,7 @@ def get_indexer(dir_name,flag= False):
 	os.chdir(dir_name)
 	index_file = dir_name + ".index"
 	
-	if(os.path.isfile(index_file))
+        if(os.path.isfile(index_file)):
 		index = pickle.load(open(index_file,"rb"))
 		return index
 
@@ -23,14 +23,13 @@ def get_indexer(dir_name,flag= False):
 		exit(1)
 
 def get_terms(search_query):
-'''
+    '''
 	Note on query format
 	--------------------
 	* Looking for a query format using the !, &&, || operators for NOT AND and OR operations
 	* Precedence Order: NOT > AND > OR
 	* Example query: foo && bar || test && !best
-'''
-	sear
+    '''
 
 def get_indices(index, terms):
 	
@@ -50,7 +49,7 @@ def init(search_query, search_dir,flag):
 #TODO: ok, now that we have the indices corresponding to each of the terms, how we gonna do the boolean operations on em?
 
 	
-if __name__ ='__main__':
+if __name__ =='__main__':
 	try:
 		search_query = sys.argv[1]
 		search_dir = sys.argv[2]
